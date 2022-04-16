@@ -36,7 +36,7 @@ func main() {
 	// Connection string
 	dbURI := fmt.Sprintf("host=%s user=%s dbname=%s sslmode=disable password=%s port=%s", host, user, dbName, password, dbPort)
 
-	// Connection
+	// Establish connection to PostrgeSQL database
 	db, err = gorm.Open(postgres.Open(dbURI), &gorm.Config{})
 	if err != nil {
 		log.Fatal(err)
